@@ -11,7 +11,7 @@ def getMatrizDeterminant(m):
           return m[0][0]*m[1][1]-m[1][0]*m[0][1]
      determinant = 0
      for c in range(len(m)):
-          determinant += ((-(1)**c)*m[0][c]*getMatrizDeterminant(getMatrizMinor))
+          determinant += ((-(1)**c)*m[0][c]*getMatrizDeterminant(getMatrizMinor(m, 0, c)))
      return determinant
      
 def getMatrizInversa(m):
